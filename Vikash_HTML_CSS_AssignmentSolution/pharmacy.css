@@ -1,0 +1,370 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: #012A4A;
+    overflow: overlay;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+header {
+    color: #f4f4f4;
+    background-color: #4f4f4f;
+    padding: 1rem;
+    font-size: xx-large;
+}
+  
+.top {
+    text-align: center;
+}
+
+.top a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+.top a:hover {
+    color: #d3d3d3;
+}
+
+/* Footer */
+footer {
+    color: #f4f4f4;
+    background-color: #000000;
+    padding: 1rem;
+    font-size: medium;
+    text-align: center;
+    /* margin-top: 2em; */
+}
+
+/* Navbar */
+#navigation { 
+    position: sticky;
+    top: 0%;
+    z-index: 10;
+}
+  
+.navbar {
+    margin: 0;
+    background-color: gray;
+}
+
+.navbar li {
+    display: inline-block;
+    /* display:block;
+    float:left; */
+    padding: 10px;
+}
+
+.navbar li:hover, .navbar li.active {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.navbar li a {
+    color: whitesmoke;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navbar li:nth-child(2):hover #dropdown1,.navbar li:nth-child(3):hover #dropdown2 {
+    display: block;
+}
+
+#dropdown1, #dropdown2 {
+    position: absolute;
+    width: auto;
+    max-width: 150px;
+    background-color: whitesmoke;
+    top: 44px;
+    padding: 0;
+    display: none;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+#dropdown1 li, #dropdown2 li {
+    display: block;
+}
+
+#dropdown1 li:hover, #dropdown2 li:hover {
+    background-color: lightgray;
+}
+
+#dropdown1 li a, #dropdown2 li a {
+    color: steelblue;
+    font-size: 1rem;
+}
+
+/* Slider */
+.slider-container {
+    width: auto;
+    height: 500px;
+    border: 2px solid steelblue;
+    overflow: hidden;
+}
+.slider {
+    overflow: hidden;
+}
+.slider .slider-figures {
+    position: relative;
+    width: 620%;
+    margin: 0;
+    left: 0;
+    animation: 20s slides infinite;
+}
+.slider .slider-figures img {
+    float: left;
+    width: 16.13%;
+}
+
+@keyframes slides {
+    0% {left: 0;}
+    16%{left: 0;}
+    20%{left: -100%;}
+    36%{left: -100%;}
+    40%{left: -200%;}
+    56%{left: -200%;}
+    60%{left: -300%;}
+    76%{left: -300%;}
+    80%{left: -400%;}
+    96%{left: -400%;}
+    100%{left: -500%;}
+}
+
+/* Products */
+.product-container,
+.lab-test-container {
+  margin: 0.5em;
+  padding: 1em;
+  /* color: #F2F2F2;
+  background-color: #012A4A; */
+}
+
+.product-container h2,
+.lab-test-container h2 {
+  margin: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.covid-care, .diabetes-care {
+  margin-top: 4em;
+}
+
+.product {
+    background-color: rgba(236, 236, 250, 0.75);
+    display: inline-block;
+    width: 18%;
+    padding: 1.2em;
+    margin: 1em;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+
+.product:hover {
+    transform: scale(1.1);
+}
+
+.product img {
+    display: flex;
+    width: 17vw;
+    height: 20vh;
+}
+
+.product a {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: goldenrod;
+    background-color: lavender;
+    padding: 0.5rem;
+    border: 3px solid mediumpurple;
+    width: 93%;
+    display: block;
+    border-radius: 20px;
+}
+
+.product a:hover {
+    background-color: lavenderblush;
+}
+
+.product a:active {
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
+    color: #012A4A
+}
+
+/* Lab Test */
+.form-container {
+	margin: 1em 5em;
+  height: 550px;
+	overflow: auto;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+
+.form-details {
+  padding: 2em 0em 1em 4em;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+label[for="district"] {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+select {
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  padding: 5px 10px;
+  margin: 10px 3px;
+  outline: none;
+  background: transparent;
+}
+
+input[type=text], input[type=email], input[type=date], input[type=time]{
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  padding: 5px 10px;
+  margin: 10px 3px;
+  background: transparent;
+  /* width: 100%; */
+  
+}
+input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, input[type=time]:focus, select:focus {
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.7);
+  outline: none;
+  /* background: transparent; */
+}
+
+.form-image {
+  margin-bottom: -5px;
+  overflow: hidden;
+}
+
+.form-image > img:nth-child(1) {
+  height: 550px;
+  width: 40vw;
+  position: absolute;
+  left: 53.5vw;
+}
+
+.submit-row {
+  margin-top: 36px;
+  margin-left: 20vw;
+ }
+
+.btn {
+  background-color: mediumpurple;
+  border: none;
+  border-radius: 3px;
+  color: whitesmoke;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: slateblue;
+}
+
+
+/* Adapting to phone and PC */
+@media screen and (max-width: 1024px) {
+    .slider-container {
+      height: 300px;
+    }
+    .product-container {
+      padding: 0em ;
+    }
+    .product {
+      width: 15vw;
+      min-height: 40vh;
+    }
+    .product img {
+      width: 15vw;
+    }
+    .form-details {
+      padding: 1em;
+      /* background-color: rgba(242, 242, 242, 0.8); */
+      margin-left: 5em;
+    }
+  
+    .form-md-scrn {
+      background-color: rgba(242, 242, 242, 0.8);
+    }
+  
+    .form-image {
+      display: none;
+    }
+    .form-container {
+      background-image: url("/images/Lab-Test/lab-test.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+    .slider-container {
+      height: 200px;
+    }
+    .row {
+      display: inline-block;
+    }
+    .product {
+      width: 30vw;
+      min-height: 40vh;
+    }
+    .product img {
+      width: 28vw;
+    }
+    .form-details {
+      margin-left: 1.5em;
+    }
+    .form-container {
+      margin: 1em;
+      width: 80vw;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .slider-container {
+      height: 100px;
+    }
+    .product {
+      width: 80%;
+    }
+  
+    .product img {
+      width: 66vw;
+    }
+    .form-row {
+      display: block;
+    }
+    .form-details {
+      margin-left: 0;
+    }
+  
+  }
+
